@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Random Song Button :)</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<h1 class="title">Random Song Button :)</h1>
+
+<button class="uiverse" id="playBtn">
+  <div class="wrapper">
+    <span>Generate</span>
+    <div class="circle circle-12"></div>
+    <div class="circle circle-11"></div>
+    <div class="circle circle-10"></div>
+    <div class="circle circle-9"></div>
+    <div class="circle circle-8"></div>
+    <div class="circle circle-7"></div>
+    <div class="circle circle-6"></div>
+    <div class="circle circle-5"></div>
+    <div class="circle circle-4"></div>
+    <div class="circle circle-3"></div>
+    <div class="circle circle-2"></div>
+    <div class="circle circle-1"></div>
+  </div>
+</button>
+
+<script>
+let audio;
+document.getElementById("playBtn").addEventListener("click", () => {
+  if (audio) audio.pause();
+  const r = Math.floor(Math.random() * 19) + 1;
+  audio = new Audio(r + ".mp3");
+  audio.play();
+});
+</script>
+
+</body>
+</html>
